@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS - Nền Tảng Web | Vũ Thùy Linh</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Vũ Thùy Linh</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+                <li><a href="index.html#about" class="nav-link">Giới Thiệu</a></li>
+                <li><a href="index.html#posts" class="nav-link active">Bài Viết</a></li>
+                <li><a href="index.html#certificates" class="nav-link">Chứng Chỉ</a></li>
+                <li><a href="index.html#contact" class="nav-link">Liên Hệ</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <article class="post-detail">
+        <div class="post-header">
+            <div class="container">
+                <div class="post-meta-info">
+                    <span class="post-category">Web Development</span>
+                    <span class="post-date"><i class="far fa-calendar"></i> 10/12/2024</span>
+                </div>
+                <h1 class="post-detail-title">HTML & CSS - Nền Tảng Web</h1>
+                <p class="post-subtitle">Hướng dẫn cơ bản về HTML và CSS, những công nghệ nền tảng để xây dựng giao diện web đẹp mắt</p>
+            </div>
+        </div>
+
+        <div class="post-image-header">
+            <img src="https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?w=1200&h=600&fit=crop" alt="HTML CSS">
+        </div>
+
+        <div class="post-content-wrapper">
+            <div class="container">
+                <div class="post-content">
+                    <h2>HTML - Ngôn Ngữ Đánh Dấu Siêu Văn Bản</h2>
+                    <p>HTML (HyperText Markup Language) là ngôn ngữ đánh dấu được sử dụng để tạo cấu trúc cho các trang web. HTML định nghĩa nội dung của trang web thông qua các thẻ (tags).</p>
+
+                    <h3>Cấu Trúc HTML Cơ Bản</h3>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Trang Web Của Tôi&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Chào Mừng Đến Với Website&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#home"&gt;Trang Chủ&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#about"&gt;Giới Thiệu&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Nội Dung Chính&lt;/h2&gt;
+            &lt;p&gt;Đây là đoạn văn bản mô tả.&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2024 Bản Quyền&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                    <h3>Các Thẻ HTML Quan Trọng</h3>
+                    <ul>
+                        <li><strong>&lt;h1&gt; - &lt;h6&gt;:</strong> Tiêu đề từ lớn đến nhỏ</li>
+                        <li><strong>&lt;p&gt;:</strong> Đoạn văn bản</li>
+                        <li><strong>&lt;a&gt;:</strong> Liên kết</li>
+                        <li><strong>&lt;img&gt;:</strong> Hình ảnh</li>
+                        <li><strong>&lt;div&gt;:</strong> Container block</li>
+                        <li><strong>&lt;span&gt;:</strong> Container inline</li>
+                        <li><strong>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;:</strong> Danh sách</li>
+                        <li><strong>&lt;form&gt;, &lt;input&gt;:</strong> Form nhập liệu</li>
+                    </ul>
+
+                    <h2>CSS - Cascading Style Sheets</h2>
+                    <p>CSS là ngôn ngữ được sử dụng để định dạng và tạo kiểu cho các trang web. CSS giúp trang web trở nên đẹp mắt và hấp dẫn hơn.</p>
+
+                    <h3>3 Cách Sử Dụng CSS</h3>
+                    
+                    <h4>1. Inline CSS</h4>
+                    <pre><code>&lt;p style="color: blue; font-size: 18px;"&gt;Văn bản màu xanh&lt;/p&gt;</code></pre>
+
+                    <h4>2. Internal CSS</h4>
+                    <pre><code>&lt;head&gt;
+    &lt;style&gt;
+        p {
+            color: blue;
+            font-size: 18px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+
+                    <h4>3. External CSS (Khuyên dùng)</h4>
+                    <pre><code>&lt;head&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;</code></pre>
+
+                    <h3>CSS Selectors</h3>
+                    <pre><code>/* Element selector */
+p {
+    color: black;
+}
+
+/* Class selector */
+.my-class {
+    background-color: yellow;
+}
+
+/* ID selector */
+#my-id {
+    font-size: 20px;
+}
+
+/* Descendant selector */
+div p {
+    margin: 10px;
+}
+
+/* Pseudo-class */
+a:hover {
+    color: red;
+}
+</code></pre>
+
+                    <h2>CSS Box Model</h2>
+                    <p>Box Model là khái niệm quan trọng trong CSS, mô tả cách các phần tử HTML được hiển thị:</p>
+                    <ul>
+                        <li><strong>Content:</strong> Nội dung thực tế</li>
+                        <li><strong>Padding:</strong> Khoảng cách giữa content và border</li>
+                        <li><strong>Border:</strong> Đường viền</li>
+                        <li><strong>Margin:</strong> Khoảng cách bên ngoài</li>
+                    </ul>
+
+                    <pre><code>.box {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 15px;
+    background-color: lightblue;
+}</code></pre>
+
+                    <h2>Flexbox - Layout Hiện Đại</h2>
+                    <p>Flexbox giúp tạo layout linh hoạt và responsive dễ dàng:</p>
+                    <pre><code>.container {
+    display: flex;
+    justify-content: center;  /* Căn giữa theo chiều ngang */
+    align-items: center;      /* Căn giữa theo chiều dọc */
+    gap: 20px;                /* Khoảng cách giữa các item */
+}
+
+.item {
+    flex: 1;  /* Các item chiếm đều không gian */
+}</code></pre>
+
+                    <h2>CSS Grid - Layout Mạnh Mẽ</h2>
+                    <pre><code>.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}</code></pre>
+
+                    <h2>Responsive Design</h2>
+                    <p>Tạo website responsive với Media Queries:</p>
+                    <pre><code>/* Mobile First Approach */
+.container {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+        margin: 0 auto;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+}</code></pre>
+
+                    <h2>CSS Animations</h2>
+                    <pre><code>/* Transition */
+.button {
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    background-color: blue;
+}
+
+/* Keyframe Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.element {
+    animation: fadeIn 1s ease-in-out;
+}</code></pre>
+
+                    <h2>Tips Học HTML & CSS</h2>
+                    <ol>
+                        <li><strong>Thực hành thường xuyên:</strong> Code mỗi ngày để cải thiện kỹ năng</li>
+                        <li><strong>Clone các website:</strong> Học bằng cách copy design các trang nổi tiếng</li>
+                        <li><strong>Sử dụng DevTools:</strong> Inspect element để học cách người khác code</li>
+                        <li><strong>Học Flexbox và Grid:</strong> Hai công cụ layout quan trọng nhất</li>
+                        <li><strong>Mobile First:</strong> Luôn thiết kế cho mobile trước</li>
+                        <li><strong>Validation:</strong> Kiểm tra code với W3C Validator</li>
+                    </ol>
+
+                    <h2>Kết Luận</h2>
+                    <p>HTML và CSS là nền tảng cơ bản nhất của web development. Dù có học framework nào đi nữa (React, Vue, Angular), bạn vẫn cần nắm vững HTML & CSS. Hãy thực hành nhiều và tạo các project thực tế để nâng cao kỹ năng!</p>
+
+                    <div class="post-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Web Development</span>
+                        <span class="tag">Frontend</span>
+                    </div>
+                </div>
+
+                <div class="post-navigation">
+                    <a href="post2.html" class="btn-back"><i class="fas fa-arrow-left"></i> Bài Trước</a>
+                    <a href="post4.html" class="btn-next">Bài Tiếp Theo <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Vũ Thùy Linh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python - Ngôn Ngữ Đa Năng | Vũ Thùy Linh</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Vũ Thùy Linh</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+                <li><a href="index.html#about" class="nav-link">Giới Thiệu</a></li>
+                <li><a href="index.html#posts" class="nav-link active">Bài Viết</a></li>
+                <li><a href="index.html#certificates" class="nav-link">Chứng Chỉ</a></li>
+                <li><a href="index.html#contact" class="nav-link">Liên Hệ</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <article class="post-detail">
+        <div class="post-header">
+            <div class="container">
+                <div class="post-meta-info">
+                    <span class="post-category">Python</span>
+                    <span class="post-date"><i class="far fa-calendar"></i> 15/12/2024</span>
+                </div>
+                <h1 class="post-detail-title">Python - Ngôn Ngữ Đa Năng</h1>
+                <p class="post-subtitle">Tìm hiểu về Python, ngôn ngữ lập trình dễ học nhưng mạnh mẽ cho AI, Data Science và nhiều hơn nữa</p>
+            </div>
+        </div>
+
+        <div class="post-image-header">
+            <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=1200&h=600&fit=crop" alt="Python">
+        </div>
+
+        <div class="post-content-wrapper">
+            <div class="container">
+                <div class="post-content">
+                    <h2>Python Là Gì?</h2>
+                    <p>Python là một ngôn ngữ lập trình bậc cao, thông dịch, có cú pháp đơn giản và dễ đọc. Được tạo ra bởi Guido van Rossum vào năm 1991, Python đã trở thành một trong những ngôn ngữ phổ biến nhất thế giới.</p>
+
+                    <h2>Tại Sao Chọn Python?</h2>
+                    <h3>1. Cú Pháp Đơn Giản và Dễ Học</h3>
+                    <p>Python được thiết kế với triết lý "code phải dễ đọc". Cú pháp của Python gần giống với ngôn ngữ tự nhiên, giúp người mới bắt đầu dễ dàng tiếp cận.</p>
+
+                    <pre><code># Hello World trong Python
+print("Hello, World!")
+
+# So sánh với Java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+</code></pre>
+
+                    <h3>2. Đa Năng và Linh Hoạt</h3>
+                    <p>Python có thể được sử dụng cho:</p>
+                    <ul>
+                        <li><strong>Web Development:</strong> Django, Flask</li>
+                        <li><strong>Data Science:</strong> Pandas, NumPy, Matplotlib</li>
+                        <li><strong>Machine Learning:</strong> TensorFlow, PyTorch, Scikit-learn</li>
+                        <li><strong>Automation:</strong> Selenium, Beautiful Soup</li>
+                        <li><strong>Game Development:</strong> Pygame</li>
+                        <li><strong>Desktop Apps:</strong> Tkinter, PyQt</li>
+                    </ul>
+
+                    <h2>Các Tính Năng Nổi Bật Của Python</h2>
+                    
+                    <h3>List Comprehension</h3>
+                    <pre><code># Tạo list các số chẵn từ 0-20
+even_numbers = [x for x in range(21) if x % 2 == 0]
+print(even_numbers)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+</code></pre>
+
+                    <h3>Functions và Lambda</h3>
+                    <pre><code># Function thông thường
+def calculate_area(length, width):
+    return length * width
+
+# Lambda function
+square = lambda x: x ** 2
+print(square(5))  # 25
+</code></pre>
+
+                    <h3>Dictionary và JSON</h3>
+                    <pre><code>import json
+
+# Dictionary
+user = {
+    "name": "Vũ Thùy Linh",
+    "age": 25,
+    "skills": ["Python", "JavaScript", "React"]
+}
+
+# Convert to JSON
+json_string = json.dumps(user, ensure_ascii=False, indent=2)
+print(json_string)
+</code></pre>
+
+                    <h2>Thư Viện Python Phổ Biến</h2>
+                    
+                    <h3>Data Science & AI</h3>
+                    <ul>
+                        <li><strong>NumPy:</strong> Thư viện tính toán số học</li>
+                        <li><strong>Pandas:</strong> Phân tích và xử lý dữ liệu</li>
+                        <li><strong>Matplotlib:</strong> Vẽ biểu đồ và visualization</li>
+                        <li><strong>TensorFlow:</strong> Deep Learning framework</li>
+                        <li><strong>Scikit-learn:</strong> Machine Learning</li>
+                    </ul>
+
+                    <h3>Web Development</h3>
+                    <ul>
+                        <li><strong>Django:</strong> Full-stack framework mạnh mẽ</li>
+                        <li><strong>Flask:</strong> Micro framework linh hoạt</li>
+                        <li><strong>FastAPI:</strong> Modern, nhanh, API framework</li>
+                    </ul>
+
+                    <h2>Ví Dụ Thực Tế: Web Scraping</h2>
+                    <pre><code>import requests
+from bs4 import BeautifulSoup
+
+# Lấy nội dung trang web
+url = "https://example.com"
+response = requests.get(url)
+soup = BeautifulSoup(response.content, 'html.parser')
+
+# Tìm tất cả các thẻ h2
+titles = soup.find_all('h2')
+for title in titles:
+    print(title.text)
+</code></pre>
+
+                    <h2>Tips Học Python Hiệu Quả</h2>
+                    <ol>
+                        <li><strong>Thực hành mỗi ngày:</strong> Code ít nhất 30 phút/ngày</li>
+                        <li><strong>Làm project thực tế:</strong> Áp dụng kiến thức vào dự án cụ thể</li>
+                        <li><strong>Đọc documentation:</strong> Tài liệu Python rất chi tiết và dễ hiểu</li>
+                        <li><strong>Join community:</strong> Tham gia các group Python trên Facebook, Reddit</li>
+                        <li><strong>Học từ code người khác:</strong> Đọc code trên GitHub</li>
+                    </ol>
+
+                    <h2>Kết Luận</h2>
+                    <p>Python là một ngôn ngữ tuyệt vời cho cả người mới bắt đầu và developer có kinh nghiệm. Với cú pháp đơn giản, thư viện phong phú và cộng đồng lớn mạnh, Python là lựa chọn hoàn hảo cho nhiều lĩnh vực từ web development đến AI.</p>
+
+                    <div class="post-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Data Science</span>
+                        <span class="tag">AI</span>
+                        <span class="tag">Programming</span>
+                    </div>
+                </div>
+
+                <div class="post-navigation">
+                    <a href="post1.html" class="btn-back"><i class="fas fa-arrow-left"></i> Bài Trước</a>
+                    <a href="post3.html" class="btn-next">Bài Tiếp Theo <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Vũ Thùy Linh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
