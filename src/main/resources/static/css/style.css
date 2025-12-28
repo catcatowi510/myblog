@@ -49,8 +49,12 @@ body {
     align-items: center;
     padding: 1rem 20px;
 }
+.nav-brand a {
+    text-decoration: none;
+    color: inherit;
+}
 
-.nav-brand h1 {
+.nav-brand a h1 {
     font-size: 1.5rem;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
@@ -586,7 +590,25 @@ section {
 .back-to-top.show {
     display: flex;
 }
+.contact-alert {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    display: none;
+}
 
+.contact-alert.success {
+    background: #e6fffa;
+    color: #065f46;
+    border: 1px solid #34d399;
+}
+
+.contact-alert.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #f87171;
+}
 /* Animations */
 @keyframes fadeInUp {
     from {

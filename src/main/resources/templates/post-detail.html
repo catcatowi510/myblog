@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vũ Thùy Linh - Blog Cá Nhân</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/post.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div th:replace="fragments/header :: header(${page})"></div>
+
+<article class="post-detail">
+    <div class="post-header">
+        <div class="container">
+            <div class="post-meta-info">
+                <span class="post-category" th:text="${post.langues}"></span>
+                <span>
+                    <i class="far fa-calendar"></i>
+                    <span th:text="${#temporals.format(post.createdAt, 'dd/MM/yyyy')}"></span>
+                </span>
+            </div>
+            <h1 class="post-detail-title" th:text="${post.title}"></h1>
+            <p class="post-subtitle" th:text="${post.description}"></p>
+        </div>
+    </div>
+
+    <div class="post-image-header">
+        <img th:src="${post.image + '??w=1903&fit=crop'}" th:alt="${post.langues}">
+    </div>
+
+    <div class="post-content-wrapper">
+        <div class="container">
+            <div th:utext="${post.content}"></div>
+            <div class="post-navigation">
+                <a href="javascript:history.back()" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> Quay Lại
+                </a>
+
+                <a th:if="${nextPost != null}"
+                th:href="@{/post/{id}(id=${nextPost.id})}"
+                class="btn-next">
+                    Bài Tiếp Theo <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</article>
+<!-- FOOTER -->
+<div th:replace="fragments/footer :: footer"></div>
+
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

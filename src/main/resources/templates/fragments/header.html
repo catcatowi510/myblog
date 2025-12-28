@@ -1,0 +1,23 @@
+<nav th:fragment="header(page)" class="navbar">
+    <div class="container">
+        <div class="nav-brand">
+            <a th:href="@{/}">
+                <h1>Vũ Thùy Linh</h1>
+            </a>
+        </div>
+
+        <ul class="nav-menu">
+            <li><a th:href="${page == 'home'} ? '#home' : '/#home'" class="nav-link" th:classappend="${page == 'home'} ? ' active' : ''">Trang Chủ</a></li>
+            <li><a th:href="${page == 'home'} ? '#about' : '/#about'" class="nav-link">Giới Thiệu</a></li>
+            <li><a th:href="${page == 'home'} ? '#posts' : '/#posts'" class="nav-link" th:classappend="${page == 'post'} ? ' active' : ''">Bài Viết</a></li>
+            <li><a th:href="${page == 'home'} ? '#contact' : '/#contact'" class="nav-link">Liên Hệ</a></li>
+        </ul>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
