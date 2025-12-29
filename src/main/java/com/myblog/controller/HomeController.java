@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import com.myblog.service.CertificateService;
 import com.myblog.service.PostService;
 
 @Controller
@@ -13,10 +14,13 @@ public class HomeController {
 
     @Autowired
     private PostService postService;
+    @Autowired
+    private CertificateService certificateService;
 
     @GetMapping("/")
     public String home(Model model) {
         model.addAttribute("posts", postService.getAll());
+        model.addAttribute("certificates", certificateService.getAll());
         model.addAttribute("page", "home");
         return "index";
     }

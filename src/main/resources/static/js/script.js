@@ -1,47 +1,70 @@
-// ================= BLOG POSTS =================
-const blogPosts = [
-    {
-        id: 1,
-        title: "JavaScript - Ngôn Ngữ Của Web",
-        excerpt: "Khám phá sức mạnh của JavaScript...",
-        date: "20/12/2024",
-        category: "JavaScript",
-        image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800&h=600&fit=crop"
+
+// Certificates data
+const certificates = [
+    { 
+        id: 1, 
+        title: "JavaScript Essentials 1", 
+        issuer: "Cisco",
+        date: "2025",
+        image: "images/certificates/cert1.jpg",
+        placeholder: "https://via.placeholder.com/400x300/6366f1/ffffff?text=JavaScript+Certificate"
     },
-    {
-        id: 2,
-        title: "Python - Ngôn Ngữ Đa Năng",
-        excerpt: "Tìm hiểu về Python...",
-        date: "15/12/2024",
-        category: "Python",
-        image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=600&fit=crop"
+    { 
+        id: 2, 
+        title: "JavaScript Essentials 2", 
+        issuer: "Cisco",
+        date: "2025",
+        image: "images/certificates/cert2.jpg",
+        placeholder: "https://via.placeholder.com/400x300/8b5cf6/ffffff?text=Python+Certificate"
+    },
+    { 
+        id: 3, 
+        title: "Networking Basics", 
+        issuer: "Cisco",
+        date: "2025",
+        image: "images/certificates/cert3.jpg",
+        placeholder: "https://via.placeholder.com/400x300/ec4899/ffffff?text=Web+Dev+Certificate"
     }
 ];
+function loadCertificates() {
+    const certificatesGrid = document.getElementById('certificatesGrid');
+    if (!certificatesGrid) return;
 
-// Load blog posts
-function loadBlogPosts() {
-    const postsGrid = document.getElementById('postsGrid');
-    if (!postsGrid) return;
+    certificatesGrid.innerHTML = '';
 
-    blogPosts.forEach(post => {
-        const postCard = document.createElement('div');
-        postCard.className = 'post-card';
-        postCard.innerHTML = `
-            <div class="post-image" style="background-image:url('${post.image}')"></div>
-            <div class="post-content">
-                <div class="post-meta">
-                    <span><i class="far fa-calendar"></i> ${post.date}</span>
-                    <span><i class="fas fa-tag"></i> ${post.category}</span>
-                </div>
-                <h3 class="post-title">${post.title}</h3>
-                <p class="post-excerpt">${post.excerpt}</p>
+    certificates.forEach(cert => {
+        const certCard = document.createElement('div');
+        certCard.className = 'certificate-card';
+
+        certCard.innerHTML = `
+            <div class="certificate-image">
+                <img 
+                    src="${cert.image}" 
+                    alt="${cert.title}" 
+                    loading="lazy"
+                    onerror="this.src='${cert.placeholder}'"
+                >
+            </div>
+            <div class="certificate-info">
+                <h3>${cert.title}</h3>
+                <p class="certificate-issuer">
+                    <i class="fas fa-award"></i> ${cert.issuer}
+                </p>
+                <p class="certificate-date">
+                    <i class="far fa-calendar"></i> ${cert.date}
+                </p>
             </div>
         `;
-        postCard.onclick = () => location.href = `post${post.id}.html`;
-        postsGrid.appendChild(postCard);
+
+        // 👉 Click ảnh để phóng to
+        const img = certCard.querySelector('img');
+        img.addEventListener('click', () => {
+            openImageModal(img.src, cert.title);
+        });
+
+        certificatesGrid.appendChild(certCard);
     });
 }
-
 // ================= MENU =================
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
@@ -117,10 +140,12 @@ window.addEventListener('scroll', () => {
 backToTop?.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-
-// ================= INIT =================
 document.addEventListener('DOMContentLoaded', () => {
-    loadBlogPosts();
+    loadCertificates();
+    
+    // Set first section as visible
+    document.querySelector('.hero').style.opacity = '1';
+    document.querySelector('.hero').style.transform = 'translateY(0)';
 });
 const contactForm = document.getElementById('contactForm');
 const contactAlert = document.getElementById('contactAlert');
@@ -170,4 +195,30 @@ function showAlert(message, type) {
         contactAlert.style.display = 'none';
     }, 3000);
 }
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImage');
+const modalCaption = document.getElementById('modalCaption');
+const closeBtn = document.querySelector('.image-modal-close');
 
+function openImageModal(src, title) {
+    modal.style.display = 'block';
+    modalImg.src = src;
+    modalCaption.textContent = title;
+}
+
+// Đóng modal
+closeBtn.onclick = () => modal.style.display = 'none';
+
+// Click nền tối để đóng
+modal.onclick = (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+};
+
+// ESC để đóng
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+        modal.style.display = 'none';
+    }
+});
